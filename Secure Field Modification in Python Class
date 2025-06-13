@@ -1,0 +1,22 @@
+#Secure Field Modification in Python Class
+import getpass
+class change:
+
+  def __init__(self):
+    self.potato = "🥔"
+
+  def changename(self):
+    p = getpass.getpass("enter password (password should be numeric): ")
+    if p == "12345":
+      print("password correct!! Now you can change the value")
+      new = input("enter new name : ")
+      e = self.potato
+      self.potato = new
+      print("name changed")
+      i = input("if you want to see changed value enter yess : ")
+      if i == "yes":
+          print(f"Previous Values is {e} And New Value is {new} ")
+      else:
+        print("thank you")
+    else:
+      print("wrong password")
